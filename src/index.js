@@ -1,17 +1,16 @@
+//import react library core
 import React from 'react';
+// react dom allows us to write JSX for web broswers 
 import ReactDOM from 'react-dom/client';
-import './index.css';
+//to use a component u have to import first 
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// ^ when we export default, we import w just the filename 
+import './global.css'
 
+  
+//index.html is where all of our compiled react gets injected, and into the div w id root, so this is doing that
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// telling it to render the topmost parent component called App 
+root.render(<App />);
+
